@@ -1,0 +1,352 @@
+{
+  "coding": {
+    "plausible": [
+      "The tests were failing intermittently and I wanted to investigate that first.",
+      "The dependency update introduced an unexpected regression.",
+      "A flaky test blocked the pipeline and I was waiting for a clean run.",
+      "The type checker found an issue I needed to understand before pushing.",
+      "I was reproducing the bug locally so the fix would actually stick.",
+      "The code review comments needed a proper response, not a quick patch.",
+      "I hit a merge conflict and was resolving it carefully.",
+      "The formatter and the linter disagreed, so I stopped to sort that out.",
+      "I was writing a regression test before changing the behaviour.",
+      "The stack trace pointed at a library I had not touched, so I traced it."
+    ],
+    "questionable": [
+      "Git did something weird.",
+      "It worked on my machine until I looked at it.",
+      "The diff was bigger than I expected, so I left it for a clearer head.",
+      "I was going to push, and then the terminal scrolled.",
+      "The branch name made sense yesterday.",
+      "I rebased, and the commits rearranged themselves.",
+      "The IDE suggested a change and I trusted it for a moment.",
+      "I closed the laptop to think, and the thought left with the screen.",
+      "The function was only supposed to be a temporary helper.",
+      "I was waiting for the compiler to finish feeling ready."
+    ],
+    "absurd": [
+      "A cosmic ray flipped a bit in the dependency lock file.",
+      "The semicolon unionised and refused to terminate the statement.",
+      "The stack overflowed because the stack was on a tea break.",
+      "A parenthesis wandered off and has not checked back in.",
+      "The unit tests achieved sentience and demanded better names.",
+      "The linter developed opinions about my variable names and walked out.",
+      "The binary was compiled under a contradictory moon.",
+      "An off-by-one error escaped and is living in the hallway.",
+      "The debugger stepped into a function that does not exist yet.",
+      "The source file was last edited by a very confident ghost."
+    ],
+    "unhinged": [
+      "The production server became self-aware and rejected the pull request.",
+      "The code compiled out of spite and then immediately uncompiled.",
+      "My editor filed a counter-pull-request against me.",
+      "The garbage collector collected my motivation and refused to return it.",
+      "The repository asked to be left alone and I respected its boundaries.",
+      "A recursive function called me back and we are still on the line.",
+      "The type system declared my idea illegal in three jurisdictions.",
+      "The commit message wrote itself and then asked for a co-author credit.",
+      "The tests passed so hard they broke the concept of failure.",
+      "I asked the code what it wanted and it requested a new career."
+    ]
+  },
+  "devops": {
+    "plausible": [
+      "The deployment pipeline was red and I did not want to stack another change on it.",
+      "A certificate was close to expiry and I rotated it before it became an incident.",
+      "The staging environment did not match production, so I paused to check why.",
+      "A health check was flapping and I was watching it settle.",
+      "Disk usage on the build agent crossed the threshold we agreed to act on.",
+      "I was waiting for the container registry to finish a slow push.",
+      "An alert fired for a service I own, so that came first.",
+      "The rollback plan was incomplete and I did not want to ship without it.",
+      "A secrets rotation was in progress and deploys were frozen on purpose.",
+      "The load balancer config needed a review before the next traffic shift."
+    ],
+    "questionable": [
+      "Docker was having a day.",
+      "The pod restarted and I decided that counted as progress.",
+      "Kubernetes rescheduled the problem onto a different node.",
+      "I cleared the cache, which felt like a strategy.",
+      "The pipeline failed on a step nobody admits to owning.",
+      "Helm rendered something, and I chose not to read all of it.",
+      "The container was healthy if you did not ask it any questions.",
+      "I restarted the service and called that an investigation.",
+      "The volume mounted, emotionally, somewhere else.",
+      "Terraform wanted to destroy something and I looked away politely."
+    ],
+    "absurd": [
+      "The cluster achieved consensus that my deploy was a bad idea.",
+      "DNS propagated into a neighbouring dimension.",
+      "The container escaped, saw the office, and climbed back in.",
+      "YAML indentation formed a crop circle in the manifest.",
+      "The load balancer started load-balancing blame.",
+      "A sidecar container developed a personality and a grudge.",
+      "The health check passed because it was too polite to fail.",
+      "Prometheus graphed my confidence and the line went straight down.",
+      "The ingress tried to ingress and got lost in the lobby.",
+      "The replica set replicated the outage for high availability."
+    ],
+    "unhinged": [
+      "The orchestrator orchestrated a coup and I was not on the new chart.",
+      "The pods formed a union and are refusing to schedule my feelings.",
+      "Docker composed a symphony and will not run anything else.",
+      "The service mesh became an actual mesh and trapped the request.",
+      "CI discovered free will and declined the job.",
+      "The canary deploy was an actual canary and it had notes.",
+      "Kubernetes apologised and then deleted the namespace anyway.",
+      "The rollback rolled forward out of artistic conviction.",
+      "Our uptime objective was interpreted by the cluster as a suggestion from a stranger.",
+      "The production namespace filed for independent statehood."
+    ]
+  },
+  "meeting": {
+    "plausible": [
+      "The meeting ran long and I lost the block I had set aside for the change.",
+      "I was writing up the decision so we would not have to meet about it again.",
+      "A stakeholder asked for a clarification and I answered that first.",
+      "The action items from yesterday were still open and I was closing them.",
+      "I was pulled into an incident review that overlapped the work.",
+      "The calendar invite moved and took my focus with it.",
+      "I needed a decision from the meeting before the code would be worth writing.",
+      "Notes from the design discussion contradicted the ticket, so I checked.",
+      "I was preparing the demo so the review would be about the work, not the setup.",
+      "Two meetings were booked on top of each other and I attended the one I owned."
+    ],
+    "questionable": [
+      "The meeting could have been an email, and then it was both.",
+      "I nodded at the right times and that used up the hour.",
+      "We agreed to take it offline, which is where it stayed.",
+      "Someone shared their screen and the rest of the day left the chat.",
+      "The agenda was optimistic and I matched its energy by doing nothing.",
+      "I was waiting for the recording so I could attend it later, allegedly.",
+      "The parking lot of topics became a multi-storey car park.",
+      "My camera was off, and so was the part of me that writes code.",
+      "We circled back so many times I am still in orbit.",
+      "The action item was assigned to everyone, which meant I assumed someone else."
+    ],
+    "absurd": [
+      "The meeting invited itself and refused to leave.",
+      "A whiteboard marker achieved quorum and voted to extend.",
+      "The conference phone joined from a previous decade and filibustered.",
+      "We action-itemed the concept of time and it was deferred.",
+      "The slide deck presented us, and we were underprepared.",
+      "A breakout room broke out and has not been recaptured.",
+      "The mute button muted the entire sprint.",
+      "Calendar holds started holding each other.",
+      "The standup stood up and walked out of the building.",
+      "Minutes were taken so thoroughly they took the afternoon too."
+    ],
+    "unhinged": [
+      "The recurring meeting became self-aware and scheduled a meeting about that.",
+      "I attended the meeting's meeting and we still have no notes.",
+      "The agenda filed a grievance against linear time.",
+      "Zoom asked me who I was and I did not have a strong answer.",
+      "The shared document edited the attendees.",
+      "We reached alignment, and alignment reached back.",
+      "The facilitator facilitated my disappearance from the ticket.",
+      "A status update updated my status to legendary and absent.",
+      "The icebreaker never thawed and we are still in it.",
+      "The meeting ended, but only in a legal sense."
+    ]
+  },
+  "deadline": {
+    "plausible": [
+      "The estimate did not include the review cycle, so the date slipped honestly.",
+      "A higher-priority fix landed in the same window and I switched to that.",
+      "I found a defect that would have shipped if I had rushed the last step.",
+      "The acceptance criteria changed after the work was already sized.",
+      "I was waiting on a dependency from another team that is still open.",
+      "The original date assumed no interruptions, and there were interruptions.",
+      "Testing took longer because the edge cases in the ticket were real.",
+      "I cut scope rather than pretend the full change would fit.",
+      "A release freeze started before I could merge.",
+      "I flagged the risk last week and this is the risk arriving."
+    ],
+    "questionable": [
+      "The deadline and I have agreed to see other people.",
+      "I was on track until the track moved.",
+      "It is basically done, which is a kind of done.",
+      "I scheduled the work for future me, and future me is furious.",
+      "The date was more of a vibe.",
+      "I would have finished if the day had contained more day.",
+      "The ticket says urgent, and so did the other six.",
+      "I saved it for the last responsible moment, and the moment left.",
+      "Progress was made in a direction.",
+      "The burndown chart burned down my confidence instead."
+    ],
+    "absurd": [
+      "The deadline moved into next week to find itself.",
+      "Timezones ganged up and stole Thursday.",
+      "The Gantt chart developed a hole and the milestone fell through.",
+      "A calendar reminder reminded me of a different life.",
+      "The sprint tried to sprint and pulled a hamstring.",
+      "The due date was printed in invisible ink.",
+      "Story points were denominated in a currency that collapsed.",
+      "The timeline folded and Tuesday is now after Friday.",
+      "My estimate was correct for a planet with longer afternoons.",
+      "The clock on the wall is in a union and stopped for negotiations."
+    ],
+    "unhinged": [
+      "The deadline looked at the ticket and resigned.",
+      "I finished it tomorrow, which has not happened yet, so we are fine.",
+      "Chronology filed a bug and I am waiting on that release.",
+      "The date picker picked a fight.",
+      "I delivered the work to last week and they sent it back unopened.",
+      "The milestone achieved escape velocity.",
+      "Time asked for a status update and I asked time to wait.",
+      "The schedule is a haunted house and I do not go in after lunch.",
+      "We shipped the concept of the feature, which is more than some teams.",
+      "The deadline was a social construct and I am between constructs."
+    ]
+  },
+  "household": {
+    "plausible": [
+      "A delivery arrived and someone had to be home for it.",
+      "The washing machine finished and the laundry needed to come out before it sat.",
+      "A repair visit was booked in a window I could not move.",
+      "I had to collect a prescription before the pharmacy closed.",
+      "School called and I needed to deal with that before coming back to the keyboard.",
+      "The kitchen leak got worse and waiting would have made it a bigger job.",
+      "I was cooking because nobody else was going to, and the food had a timer.",
+      "A neighbour needed help with something that could not wait until evening.",
+      "The bins go out on a schedule and I missed the last chance yesterday.",
+      "I had a household appointment that was booked before this work was."
+    ],
+    "questionable": [
+      "The dishwasher and I entered a negotiation.",
+      "I sat down to start and the house presented a list.",
+      "Something in the fridge required a moral decision.",
+      "I was going to work, and then I noticed the floor.",
+      "The kettle boiled and that became the plan.",
+      "A lightbulb died and replacing it took the precise length of the task.",
+      "I alphabetised a drawer and called it admin.",
+      "The cat occupied the chair with a mandate.",
+      "I went to find a pen and emerged an hour later with a different pen.",
+      "The laundry multiplied while I was looking for a matching sock."
+    ],
+    "absurd": [
+      "The hoover unionised and is refusing soft furnishings.",
+      "A houseplant requested a one-to-one about lighting.",
+      "The toaster produced a ticket instead of toast.",
+      "Dust formed a committee and tabled the afternoon.",
+      "The fridge magnet demagnetised my intentions.",
+      "A sock escaped to the shadow realm behind the dryer.",
+      "The thermostat developed opinions and none of them were mine.",
+      "The recycling sorted me into the wrong bin.",
+      "A spider held the doorway and had the better argument.",
+      "The kettle whistled in a frequency that cancelled productivity."
+    ],
+    "unhinged": [
+      "The house asked who I was and I did not have building access.",
+      "Furniture rearranged itself into a maze with no laptop at the centre.",
+      "The washing machine completed a cycle and also my career.",
+      "I opened a cupboard and a smaller deadline fell out.",
+      "The doorbell rang from the inside.",
+      "A roomba mapped my excuses and is now charging on them.",
+      "The lights dimmed whenever I opened the editor.",
+      "The cutlery drawer staged an intervention.",
+      "I tried to leave for my desk and the hallway was longer than yesterday.",
+      "The smoke alarm tested itself, and then tested me."
+    ]
+  },
+  "general": {
+    "plausible": [
+      "I was context-switching between two tasks and lost the thread of this one.",
+      "I needed a short break so the next hour of work would be accurate.",
+      "Something personal came up and I dealt with it before it got bigger.",
+      "I misread the priority and spent the time on the item above this one.",
+      "I was waiting for an answer I needed before I could continue.",
+      "The instructions were ambiguous and I stopped rather than guess wrong.",
+      "I wrote down what I had learned so far so it would not live only in my head.",
+      "A smaller task turned out to have a real blocker.",
+      "I ran out of the uninterrupted time the change actually needs.",
+      "I picked it up late enough that starting would have meant stopping badly."
+    ],
+    "questionable": [
+      "I was about to start, and then I became philosophical.",
+      "The task and I are in a situationship.",
+      "I did research, if you count staring.",
+      "Motivation updated its terms of service and I have not accepted them.",
+      "I put it on a list, and the list is in a very safe place.",
+      "I was busy being almost ready.",
+      "The idea was clear until I tried to have it.",
+      "I scheduled deep work and then dug a very shallow hole.",
+      "Focus was installed but not running.",
+      "I gave it my second-best hour, which did not show up."
+    ],
+    "absurd": [
+      "Productivity was lost in the same drawer as the good cables.",
+      "A thought required a firmware update and bricked.",
+      "The day was delivered to the wrong address.",
+      "My attention span filed for remote work and did not connect.",
+      "A small task put on a coat and became a large task.",
+      "The to-do list to-did something else.",
+      "Motivation left a note that said back in five, several eras ago.",
+      "I opened a new tab and fell into a gentle abyss.",
+      "The clock hands are clapping slowly.",
+      "Competence took a personal day and left me the keys."
+    ],
+    "unhinged": [
+      "I became the person this task was waiting on, and I do not pick up.",
+      "Reality submitted a pull request removing this afternoon.",
+      "I attempted the task in a mirror dimension and it shipped there.",
+      "The void replied to my status update with a read receipt.",
+      "I have done it in every timeline except this one.",
+      "Free will clocked out and middle management has no comment.",
+      "The task looked at me and we both apologised.",
+      "I outsourced it to tomorrow and tomorrow is a shell company.",
+      "Existence returned a 500 and asked me to retry never.",
+      "I finished the work so completely that this universe no longer contains it."
+    ]
+  },
+  "friday": {
+    "plausible": [
+      "I was mentally already in the weekend.",
+      "This looked much easier at 14:00.",
+      "Nobody should have approved a pull request this late on a Friday.",
+      "I did not want to start a change I could not finish before people left.",
+      "The reviewer I needed had already signed off for the week.",
+      "Shipping this after 16:00 would have meant owning it all weekend.",
+      "I wrapped up loose notes so Monday would not start from zero.",
+      "The Friday deploy window had already closed.",
+      "I used the last hour to write down where I stopped.",
+      "A Friday afternoon change has burned us before, so I waited."
+    ],
+    "questionable": [
+      "It was Friday, and the keyboard knew.",
+      "I opened the ticket, saw the time, and closed it like a professional.",
+      "My best thinking had already left for the weekend.",
+      "I was present in body and in a soft out-of-office reply.",
+      "The change can wait until the week has been replaced.",
+      "I did a Friday amount of work, which is a recognised unit.",
+      "Slack went quiet and I took that as a sign from the universe.",
+      "I would have done it if it had been a Tuesday problem.",
+      "The commit would have been haunted by Monday.",
+      "I protected production from myself, which should count."
+    ],
+    "absurd": [
+      "The weekend sent a cease and desist.",
+      "Friday afternoon code is legally fiction.",
+      "My laptop entered weekend mode and greyed out the repository.",
+      "The sun set on the sprint in a literal and binding way.",
+      "A seagull stole the last useful thought.",
+      "The office plants clocked out and I followed their lead.",
+      "Time became syrup sometime after lunch.",
+      "The pull request looked at the clock and asked to be excused.",
+      "Friday compiled with warnings and I ignored them on principle.",
+      "The calendar marked the day complete while I was still in it."
+    ],
+    "unhinged": [
+      "The week ended without consulting me and I respect its authority.",
+      "I merged with the weekend and the conflict is unresolved.",
+      "Saturday has already started in my heart and it has no CI.",
+      "The ticket was last seen heading west at speed.",
+      "I told the code we would talk on Monday and the code seemed relieved.",
+      "Friday achieved finality and there is no appeal.",
+      "My remaining focus left in a group chat I am not in.",
+      "The repository is closed for the season.",
+      "I attempted work and the day returned HTTP 451.",
+      "Monday can have this. Friday has union rules."
+    ]
+  }
+}
