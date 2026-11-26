@@ -26,7 +26,7 @@ The tool does not look at the date.
 pip install lupaxa-excuse-generator
 ```
 
-Requires Python 3.10+. The standard library is enough.
+Requires Python 3.11 to 3.15. The standard library is enough.
 
 ## CLI
 

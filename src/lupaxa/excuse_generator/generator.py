@@ -9,12 +9,7 @@ from lupaxa.excuse_generator.exceptions import InvalidCategoryError, InvalidLeve
 from lupaxa.excuse_generator.models import Category, Level
 
 
-def get_excuse(
-    category: Category | str | None = None,
-    level: Level | str | None = None,
-    *,
-    rng: random.Random | None = None,
-) -> str:
+def get_excuse(category: Category | str | None = None, level: Level | str | None = None, *, rng: random.Random | None = None) -> str:
     """Return one excuse.
 
     ``category`` and ``level`` narrow the pool. When either is omitted, one
@@ -32,13 +27,7 @@ def get_excuse(
     return generator.choice(catalog[chosen_category][chosen_level])
 
 
-def get_excuses(
-    count: int,
-    category: Category | str | None = None,
-    level: Level | str | None = None,
-    *,
-    rng: random.Random | None = None,
-) -> list[str]:
+def get_excuses(count: int, category: Category | str | None = None, level: Level | str | None = None, *, rng: random.Random | None = None) -> list[str]:
     """Return ``count`` excuses, drawing with replacement."""
     if isinstance(count, bool) or not isinstance(count, int) or count < 1:
         raise ValueError("count must be an integer greater than zero")

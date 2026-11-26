@@ -62,13 +62,9 @@ def parse_excuses(payload: object) -> ExcuseCatalog:
         for level in Level:
             raw_items = raw_levels[level.value]
             if not isinstance(raw_items, list):
-                raise ExcuseDataError(
-                    f"Category {category.value!r} level {level.value!r} must be a list."
-                )
+                raise ExcuseDataError(f"Category {category.value!r} level {level.value!r} must be a list.")
             if not raw_items:
-                raise ExcuseDataError(
-                    f"Category {category.value!r} level {level.value!r} has no excuses."
-                )
+                raise ExcuseDataError(f"Category {category.value!r} level {level.value!r} has no excuses.")
             items: list[str] = []
             for raw_item in raw_items:
                 text = _text_entry(raw_item, kind="Excuse")
@@ -122,21 +118,10 @@ def _expect_exact_keys(found: set[str], expected: set[str], label: str) -> None:
     missing = sorted(expected - found)
     unexpected = sorted(found - expected)
     if missing or unexpected:
-        raise ExcuseDataError(
-            f"Excuse {label} do not match the packaged set "
-            f"(missing: {missing}, unexpected: {unexpected})."
-        )
+        raise ExcuseDataError(f"Excuse {label} do not match the packaged set (missing: {missing}, unexpected: {unexpected}).")
 
 
 def _text_entry(value: object, *, kind: str) -> str:
-    if (
-        not isinstance(value, str)
-        or value == ""
-        or value != value.strip()
-        or "\n" in value
-        or "\r" in value
-    ):
-        raise ExcuseDataError(
-            f"{kind} must be a non-empty single-line string without surrounding whitespace."
-        )
+    if not isinstance(value, str) or value == "" or value != value.strip() or "\n" in value or "\r" in value:
+        raise ExcuseDataError(f"{kind} must be a non-empty single-line string without surrounding whitespace.")
     return value

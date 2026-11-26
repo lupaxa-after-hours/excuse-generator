@@ -128,9 +128,7 @@ def test_list_flags_are_exclusive() -> None:
     assert exc.value.code == 2
 
 
-def test_data_failure_exits_1(
-    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
-) -> None:
+def test_data_failure_exits_1(monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]) -> None:
     """Broken packaged data exits 1 without a traceback."""
 
     def broken(*_args: object, **_kwargs: object) -> list[str]:

@@ -28,9 +28,7 @@ def test_packaged_excuses_cover_every_category_and_level() -> None:
 def test_packaged_excuses_are_unique() -> None:
     """The same excuse is not stored twice."""
     catalog = load_excuses()
-    excuses = [
-        text for category in Category for level in Level for text in catalog[category][level]
-    ]
+    excuses = [text for category in Category for level in Level for text in catalog[category][level]]
     assert len(excuses) >= 280
     assert len(set(excuses)) == len(excuses)
     assert "Git did something weird." in catalog[Category.CODING][Level.QUESTIONABLE]
@@ -92,7 +90,4 @@ def test_empty_blame_entry_is_rejected() -> None:
 
 
 def _valid_excuses() -> dict[str, dict[str, list[str]]]:
-    return {
-        category.value: {level.value: [f"{category.value} {level.value} sample"] for level in Level}
-        for category in Category
-    }
+    return {category.value: {level.value: [f"{category.value} {level.value} sample"] for level in Level} for category in Category}

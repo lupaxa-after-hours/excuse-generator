@@ -69,9 +69,7 @@ def test_random_category_can_vary() -> None:
 def test_random_level_can_vary() -> None:
     """Omitting the level can draw from more than one level."""
     catalog = load_excuses()
-    owner = {
-        text: level for category in Category for level in Level for text in catalog[category][level]
-    }
+    owner = {text: level for category in Category for level in Level for text in catalog[category][level]}
     rng = random.Random(6)
     seen = {owner[get_excuse(category="meeting", rng=rng)] for _ in range(40)}
     assert len(seen) > 1
@@ -128,12 +126,7 @@ def test_does_not_touch_global_random() -> None:
     assert random.getstate() == before
 
 
-def _texts(
-    catalog: dict[Category, dict[Level, tuple[str, ...]]],
-    *,
-    category: Category | None = None,
-    level: Level | None = None,
-) -> set[str]:
+def _texts(catalog: dict[Category, dict[Level, tuple[str, ...]]], *, category: Category | None = None, level: Level | None = None) -> set[str]:
     categories = (category,) if category is not None else tuple(Category)
     levels = (level,) if level is not None else tuple(Level)
     return {text for item in categories for name in levels for text in catalog[item][name]}
