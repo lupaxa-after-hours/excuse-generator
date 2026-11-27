@@ -6,15 +6,7 @@ import random
 
 import pytest
 
-from lupaxa.excuse_generator import (
-    Category,
-    ExcuseError,
-    InvalidCategoryError,
-    InvalidLevelError,
-    Level,
-    get_excuse,
-    get_excuses,
-)
+from lupaxa.excuse_generator import Category, ExcuseError, InvalidCategoryError, InvalidLevelError, Level, get_excuse, get_excuses
 from lupaxa.excuse_generator.dataset import load_excuses
 
 
@@ -48,11 +40,7 @@ def test_combined_filtering() -> None:
     """Category and level together select that one pool."""
     catalog = load_excuses()
     allowed = set(catalog[Category.CODING][Level.QUESTIONABLE])
-    chosen = get_excuse(
-        category=Category.CODING,
-        level=Level.QUESTIONABLE,
-        rng=random.Random(4),
-    )
+    chosen = get_excuse(category=Category.CODING, level=Level.QUESTIONABLE, rng=random.Random(4))
     assert chosen in allowed
     assert "Git did something weird." in allowed
 

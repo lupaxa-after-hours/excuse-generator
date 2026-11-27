@@ -53,11 +53,7 @@ def parse_excuses(payload: object) -> ExcuseCatalog:
         if not isinstance(raw_levels, dict):
             raise ExcuseDataError(f"Category {category.value!r} must be a JSON object of levels.")
         level_keys = _string_keys(raw_levels, f"Levels for {category.value!r}")
-        _expect_exact_keys(
-            level_keys,
-            {level.value for level in Level},
-            f"levels for {category.value}",
-        )
+        _expect_exact_keys(level_keys, {level.value for level in Level}, f"levels for {category.value}")
         catalog[category] = {}
         for level in Level:
             raw_items = raw_levels[level.value]

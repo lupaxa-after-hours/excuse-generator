@@ -16,53 +16,15 @@ MAX_COUNT = 100
 
 def build_parser() -> argparse.ArgumentParser:
     """Return the excuse-generator argument parser."""
-    parser = argparse.ArgumentParser(
-        prog="excuse-generator",
-        description="Generate a random excuse.",
-    )
-    parser.add_argument(
-        "--version",
-        action="store_true",
-        help="Show version information and exit.",
-    )
-    parser.add_argument(
-        "-c",
-        "--category",
-        help="Limit excuses to one category.",
-    )
-    parser.add_argument(
-        "-l",
-        "--level",
-        help="Limit excuses to one absurdity level.",
-    )
-    parser.add_argument(
-        "-n",
-        "--count",
-        type=_count,
-        default=None,
-        help=f"Print this many excuses (1 to {MAX_COUNT}).",
-    )
-    parser.add_argument(
-        "--blame",
-        action="store_true",
-        help="Print one thing to blame.",
-    )
-    parser.add_argument(
-        "--categories",
-        action="store_true",
-        help="List categories and exit.",
-    )
-    parser.add_argument(
-        "--levels",
-        action="store_true",
-        help="List absurdity levels and exit.",
-    )
-    parser.add_argument(
-        "--seed",
-        type=int,
-        default=None,
-        help="Seed generation for a repeatable result.",
-    )
+    parser = argparse.ArgumentParser(prog="excuse-generator", description="Generate a random excuse.")
+    parser.add_argument("--version", action="store_true", help="Show version information and exit.")
+    parser.add_argument("-c", "--category", help="Limit excuses to one category.")
+    parser.add_argument("-l", "--level", help="Limit excuses to one absurdity level.")
+    parser.add_argument("-n", "--count", type=_count, default=None, help=f"Print this many excuses (1 to {MAX_COUNT}).")
+    parser.add_argument("--blame", action="store_true", help="Print one thing to blame.")
+    parser.add_argument("--categories", action="store_true", help="List categories and exit.")
+    parser.add_argument("--levels", action="store_true", help="List absurdity levels and exit.")
+    parser.add_argument("--seed", type=int, default=None, help="Seed generation for a repeatable result.")
     return parser
 
 
@@ -92,12 +54,7 @@ def main(argv: list[str] | None = None) -> int:
             print(get_blame(rng=generator))
             return 0
 
-        excuses = get_excuses(
-            1 if args.count is None else args.count,
-            category=args.category,
-            level=args.level,
-            rng=generator,
-        )
+        excuses = get_excuses(1 if args.count is None else args.count, category=args.category, level=args.level, rng=generator)
     except ExcuseDataError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 1

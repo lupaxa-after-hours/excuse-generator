@@ -147,12 +147,6 @@ def test_module_entry_version() -> None:
     src = str(_SRC)
     current = env.get("PYTHONPATH")
     env["PYTHONPATH"] = src if not current else src + os.pathsep + current
-    proc = subprocess.run(
-        [sys.executable, "-m", "lupaxa.excuse_generator", "--version"],
-        capture_output=True,
-        text=True,
-        check=False,
-        env=env,
-    )
+    proc = subprocess.run([sys.executable, "-m", "lupaxa.excuse_generator", "--version"], capture_output=True, text=True, check=False, env=env)
     assert proc.returncode == 0, proc.stderr
     assert __version__ in proc.stdout
